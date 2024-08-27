@@ -16,6 +16,14 @@ h1, h2, h3, h4, h5 {
     @include font-color(--title-color);
 }
 
+.color-bg-second{
+    @include font-color(--background-secondary-color);
+}
+
+.color-bg-second-bold{
+    @include font-color(--background-color-secondary-darker);
+}
+
 .color-secondary-title2{
     @include font-color(--title2-color);
 }

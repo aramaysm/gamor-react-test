@@ -9,6 +9,8 @@ html[data-theme="dark"] {
     --background-secondary-color: #{$dark-bg-secondary-container};  
     --background-color-body:#{$dark-bg-body};
     --navlink: #{$dark-navlink};
+--background-color-secondary-darker: #{$dark-bg-secondary-container-darker};
+
 
 
     --success: #{$success};
@@ -25,6 +27,7 @@ html[data-theme="dark"] {
     --background-color: #{$light-bg-main-container};  
     --background-secondary-color: #{$light-bg-secondary-container};
     --navlink: #{$light-navlink};
+    --background-color-secondary-darker: #{$light-bg-secondary-container-darker};
 
     --success: #{$success};
     --primary: #{$primary};

@@ -9,7 +9,7 @@ export const Presentation_Banner = ({styles}:any) => {
 
 
     return (
-        <div className={"column gap-1 w-3 w-sm-9 p-2 " + styles.colmaincolor}>
+        <div className={"column gap-1 w-3 w-sm-9 p-2 just-bet " + styles.colmaincolor}>
           <div className="column">
             <h1 className={"color-title font-bold  "}>start</h1>
             <h1 className={"color-secondary-title2 font-bold"}>streaming</h1>
