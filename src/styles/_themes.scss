@@ -1,0 +1,32 @@
+@import "./colors";
+
+
+html[data-theme="dark"] {
+    --title-color: #{$dark-title};
+    --title2-color: #{$dark-title2};  
+    --subtitle-color: #{$dark-subtitle};
+    --background-color: #{$dark-bg-main-container};  
+    --background-secondary-color: #{$dark-bg-secondary-container};  
+    --navlink: #{$dark-navlink};
+
+    --success: #{$success};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --warning: #{$warning};
+    --danger:  #{$danger};
+  }
+  
+  html[data-theme="light"] {
+    --title-color: #{$light-title};
+    --title2-color: #{$light-title2};  
+    --subtitle-color: #{$light-subtitle};
+    --background-color: #{$light-bg-main-container};  
+    --background-secondary-color: #{$light-bg-secondary-container};
+    --navlink: #{$light-navlink};
+
+    --success: #{$success};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --warning: #{$warning};
+    --danger:  #{$danger};
+  }

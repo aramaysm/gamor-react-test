@@ -1,0 +1,18 @@
+
+@import './_themes';
+
+input, select {
+    border: 1px solid  gray;
+    border-radius: 3px;
+    padding: 7px;
+    width: 100% !important;
+}
+input:focus {
+    border: 1px solid var(--secondary);
+    border-radius: 3px;    
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid gray !important;
+  }

@@ -1,0 +1,20 @@
+@import "./colors";
+@import "./themes";
+
+@mixin font-color($color-name) {
+  color: var($color-name);
+}
+
+@mixin bg-color($color-name) {
+  background-color: var($color-name);
+}
+
+@mixin border-color($color-name) {
+  outline: none;
+  border: 1px solid var($color-name) !important;
+}
+
+@mixin font-size-rem($size) {
+  font-size: $size / 16 * 1rem;
+}
+
