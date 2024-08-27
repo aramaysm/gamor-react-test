@@ -2,7 +2,16 @@
 
 
 .container {
-    background-color: var(--background-color);
+    background-color: var(--background-color-body);
     width: 100%;
     height: 100%;
 }
+
+.colmaincolor{
+    background-color: var(--background-color);
+}
+
+.coldiffcolor{
+    background-color: var(--background-secondary-color);
+}
+

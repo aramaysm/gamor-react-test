@@ -1,5 +1,5 @@
 @import "./colors";
-
+@import "./mixins";
 
 html[data-theme="dark"] {
     --title-color: #{$dark-title};
@@ -7,7 +7,9 @@ html[data-theme="dark"] {
     --subtitle-color: #{$dark-subtitle};
     --background-color: #{$dark-bg-main-container};  
     --background-secondary-color: #{$dark-bg-secondary-container};  
+    --background-color-body:#{$dark-bg-body};
     --navlink: #{$dark-navlink};
+
 
     --success: #{$success};
     --primary: #{$primary};
@@ -29,4 +31,78 @@ html[data-theme="dark"] {
     --secondary: #{$secondary};
     --warning: #{$warning};
     --danger:  #{$danger};
+  }
+
+
+  .bg-primary{
+    @include bg-color(--primary);
+  }
+  .bg-success{
+    @include bg-color(--success);
+  }
+  .bg-secondary{
+    @include bg-color(--secondary);
+  }
+  .bg-main{
+    @include bg-color(--background-color);
+  }
+  .bg-white{
+    background-color:  white;
+  }
+  .bg-sec-color{
+    @include bg-color(--background-secondary-color);
+  }
+
+  
+  .color-success {
+    @include font-color(--success);
+  }
+  .color-primary {
+    @include font-color(--primary);
+  }
+  .color-secondary {
+    @include font-color(--secondary);
+  }
+  .color-warning {
+    @include font-color(--warning);
+  }
+  .color-danger {
+    @include font-color(--danger);
+  }
+  .color-dark {
+    @include font-color(--navlink);
+  }
+
+  
+  .border-success {
+    @include border-color(--success);
+  }
+  .border-primary {
+    @include border-color(--primary);
+  }
+  .border-secondary {
+    @include border-color(--secondary);
+  }
+  .border-warning {
+    @include border-color(--warning);
+  }
+  .border-danger {
+    @include border-color(--danger);
+  }
+  .border-dark {
+    @include border-color(dark);
+  }
+  .border-white{
+    @include border-color(white)
+  }
+  
+ 
+  .rounded-1{
+    border-radius: 10px;
+  }
+  .rounded-2{
+    border-radius: 20px;
+  }
+  .rounded-3{
+    border-radius: 30px;
   }

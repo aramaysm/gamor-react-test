@@ -10,6 +10,7 @@
     min-width: 120px;
     font-size: 14px;
     border: none;
+    padding: 5px;
   }
   
   .button-primary {
@@ -29,18 +30,33 @@
   .button-secondary {
     @include button(var(--background-color),var(--title-color));
   }
+
   .button-secondary:hover {
     @include button( var(--title-color), var(--background-color));
+    box-shadow: #333333;
     border: 1px solid #f1f1f1;
   }
+
+  .button-secondary2 {
+    @include button(var(--secondary),white);    
+    border: 1px solid #f1f1f1;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .button-secondary3 {
+    @include button(rgb(75, 75, 75),var(--title-color));    
+    padding-left: 10px;
+    padding-right: 10px;
+  } 
   
   .button-danger {
     @include button($danger, white);
   }
+
   .button-danger:disabled {
     @include button(danger-light, white);
-  }
-  
+  }  
 
 
   /*  Toggle button to switch theme */
