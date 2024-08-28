@@ -26,7 +26,7 @@ export const Presentation_Banner = ({styles}:any) => {
               <Button
                 label={"Create Account"}
                 onClick={() => {}}
-                color={"secondary3"}
+                color={"secondary3-active"}
               />
             </div>
             <div className="column items-center">

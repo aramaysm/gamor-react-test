@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import { NavBar } from "../../layouts/NavBar";
 import styles from "./style.module.scss";
-import { ButtonProps } from "../../services/models";
+import { ButtonProps, GameModel } from "../../services/models";
 import { Button } from "../../components";
-import { Presentation_Banner, Promotion_Banner } from "../../containers/Portal";
-import CatPhoto from "../../assets/images/cute-cat-studio.png"
+import {
+  Categories,
+  Presentation_Banner,
+  Promotion_Banner,
+  SearchBanner,
+} from "../../containers/Portal";
+import { games, users } from "../../services/static_data";
 
 export const Portal = ({}) => {
   const buttonsNavBar: ButtonProps[] = [
@@ -20,22 +25,53 @@ export const Portal = ({}) => {
     },
   ];
 
-  const [selectedGame, setSelectedGame] = React.useState({
-    title:"Fornite New Season",
-    subtitle:"Join Live Now",
-    time:"11:45",
-    photo: CatPhoto
-  });
+  const [selectedGame, setSelectedGame] = React.useState<GameModel>(games[0]);
+  const [selectedUsers, setSelectedUsers] = React.useState<string[]>([]);
+
+  const onSelectUser = (userNew: string) => {
+    const userFound = selectedUsers.find((item) => item === userNew);
+    const users = selectedUsers;
+
+    if (!userFound) {
+      users.push(userNew);
+      setSelectedUsers(users);
+    }
+  };
 
   return (
     <div className={styles.container}>
       <NavBar title={"Gamor"} buttons={buttonsNavBar} />
       <div className={"row just-center mt-3 pb-1 wrap"}>
         <Presentation_Banner styles={styles} />
-        <Promotion_Banner styles={styles} promotion_title={selectedGame.title} 
-        promotion_subtitle={selectedGame.subtitle} promotion_time={selectedGame.time}
-         promotion_photo={selectedGame.photo} />
-        <div className={"column w-3 w-sm-9 " + styles.colmaincolor}></div>
+
+        <Promotion_Banner
+          styles={styles}
+          promotion_title={selectedGame.title}
+          promotion_subtitle={selectedGame.description}
+          promotion_time={selectedGame.timeAlive
+            ?.toISOString()
+            .substring(11, 16)}
+          promotion_photo={selectedGame.photo}
+          usersSelected={selectedUsers}
+        />
+        <SearchBanner
+          users={users}
+          games={games}
+          onSelectGame={(data: GameModel) => {
+            setSelectedGame(data);
+          }}
+          styles={styles}
+          onSelectUser={(data) => {
+            const userFound = selectedUsers.find((item) => item === data);
+
+            if (!userFound) {
+              setSelectedUsers([...selectedUsers, data]);
+            }
+          }}
+        />
+      </div>
+      <div className={"row just-center mt-3 pb-1 wrap"}>
+        <Categories styles={styles} />
       </div>
     </div>
   );

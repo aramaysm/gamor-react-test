@@ -30,10 +30,13 @@
   .button-secondary {
     @include button(var(--background-color),var(--title-color));
   }
+  .button-secondary-inverse {
+    @include button(var(--title-color),var(--background-color));
+  }
 
   .button-secondary:hover {
     @include button( var(--title-color), var(--background-color));
-    box-shadow: #333333;
+    box-shadow: #333333 1px 1px;
     border: 1px solid #f1f1f1;
   }
 
@@ -45,10 +48,18 @@
   }
 
   .button-secondary3 {
-    @include button(rgb(75, 75, 75),var(--title-color));    
+    @include button(var(--transparent),var(--title-color));    
     padding-left: 10px;
     padding-right: 10px;
   } 
+  
+  .button-secondary3:hover, .button-secondary3-active {
+    @include button(var(--grey),var(--title-color));    
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: #363c4421 2px 2px;
+  } 
+
   
   .button-danger {
     @include button($danger, white);

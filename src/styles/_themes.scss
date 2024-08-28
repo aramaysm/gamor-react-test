@@ -9,15 +9,14 @@ html[data-theme="dark"] {
     --background-secondary-color: #{$dark-bg-secondary-container};  
     --background-color-body:#{$dark-bg-body};
     --navlink: #{$dark-navlink};
---background-color-secondary-darker: #{$dark-bg-secondary-container-darker};
-
-
+    --background-color-secondary-darker: #{$dark-bg-secondary-container-darker};
 
     --success: #{$success};
     --primary: #{$primary};
     --secondary: #{$secondary};
     --warning: #{$warning};
     --danger:  #{$danger};
+    --grey: #{$grey};
   }
   
   html[data-theme="light"] {
@@ -34,6 +33,7 @@ html[data-theme="dark"] {
     --secondary: #{$secondary};
     --warning: #{$warning};
     --danger:  #{$danger};
+    --grey: #{$light-bg-main-container};
   }
 
 
@@ -54,6 +54,9 @@ html[data-theme="dark"] {
   }
   .bg-sec-color{
     @include bg-color(--background-secondary-color);
+  }
+  .bg-color-body{
+    @include bg-color( --background-color-body)
   }
 
   
@@ -108,4 +111,8 @@ html[data-theme="dark"] {
   }
   .rounded-3{
     border-radius: 30px;
+  }
+
+  .cursor-point{
+    cursor: pointer;
   }

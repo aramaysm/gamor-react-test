@@ -15,3 +15,12 @@
     background-color: var(--background-secondary-color);
 }
 
+input[type="search"], input[type="search"]:active, input[type="search"]:focus {
+    background-color: transparent;
+    border: none;
+    outline:none;
+    color: var(--title-color);
+    width: 85%;
+}
+
+

@@ -6,3 +6,9 @@ export enum EnumTypeInput {
     EMAIL = 'Email',
 }
 
+
+export enum EnumTypePlatform {
+    PARTY = "Party",
+    MATCHS = "Matchs",
+    STREAMS = "Streams"
+}
