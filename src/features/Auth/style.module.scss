@@ -1,0 +1,26 @@
+@use "../../styles/themes" as *;
+
+
+.container {
+    background-color: var(--background-color-body);
+    width: 100%;
+    height: 80%;
+}
+
+
+.colmaincolor{
+    background-color: var(--background-color);
+}
+
+.coldiffcolor{
+    background-color: var(--background-secondary-color);
+}
+
+
+@media screen and (max-width: 780px) {
+    .container {
+        background-color: var(--background-color-body);
+        width: 100%;
+        height: 100%;
+    }
+}

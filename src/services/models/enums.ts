@@ -4,6 +4,7 @@ export enum EnumTypeInput {
     SELECT = 'Select',
     CHECK = 'Check',
     EMAIL = 'Email',
+    PASS = "Password"
 }
 
 

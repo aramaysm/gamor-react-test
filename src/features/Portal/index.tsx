@@ -10,18 +10,22 @@ import {
   SearchBanner,
 } from "../../containers/Portal";
 import { games, users } from "../../services/static_data";
+import { useNavigate } from "react-router-dom";
 
 export const Portal = ({}) => {
+
+  const navigate = useNavigate();
+
   const buttonsNavBar: ButtonProps[] = [
     {
       color: "secondary",
       label: "Sign In",
-      onClick: () => {},
+      onClick: () => {navigate("/login")},
     },
     {
       color: "secondary2",
       label: "Create Account",
-      onClick: () => {},
+      onClick: () => {navigate("/create")},
     },
   ];
 

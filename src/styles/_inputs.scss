@@ -2,17 +2,23 @@
 @import './_themes';
 
 input, select {
-    border: 1px solid  gray;
-    border-radius: 3px;
+    border: 1px solid  var(--background-secondary-color);
+    border-radius: 15px;
     padding: 7px;
     width: 100% !important;
+    background-color: var(--transparent);
+    color: white
 }
+
 input:focus {
     border: 1px solid var(--secondary);
-    border-radius: 3px;    
+    border-radius: 15px;    
+    color: white;
+
 }
 
 input[type=text]:focus {
     outline: none;
     border: 1px solid gray !important;
+    color: white;
   }

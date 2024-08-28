@@ -8,8 +8,7 @@ interface TextFieldProps {
   disabled?: boolean;
   color: string;
   value?: string;
-  type: EnumTypeInput;
-  key: string;
+  type: EnumTypeInput;  
   errorMsg: string;
 }
 
@@ -53,7 +52,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         pattern={type === EnumTypeInput.NUMBER ? "[0-9]*" : type === EnumTypeInput.TEXT ? "[a-zA-Z]*" : "" }
         placeholder={label}
         onChange={(event) => onChangeInput(event)}
-        className={"w-full border-" + error ? 'danger' : "primary" }
+        className={"w-full bg-seconday border-" + error ? 'danger' : "primary" }
         defaultValue={value}
       />
       {error ?

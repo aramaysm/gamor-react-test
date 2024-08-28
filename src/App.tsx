@@ -4,6 +4,8 @@ import "./styles/styles.scss";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Portal } from './features/Portal';
 import "./App.css"
+import { Login } from './features/Auth/Login';
+import { CreateAccount } from './features/Auth/CreateAcccount';
 
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route index element={<Portal />} />                  
+          <Route index element={<Portal />} />  
+          <Route path='/login' element={<Login />} />    
+          <Route path='/create' element={<CreateAccount />} />                
       </Routes>
     </BrowserRouter>
   );
